@@ -1,4 +1,4 @@
-public class A {
+public class A implements Cloneable {
     private int x;
     private int y;
     // Constructor vacio
@@ -18,5 +18,8 @@ public class A {
     public String toString() {
         String h = "x: " + this.x + ", y: " + this.y;
         return h;
+    }
+    public Object clone() {
+        return new A(x, y);
     }
 }
